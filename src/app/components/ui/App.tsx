@@ -1,9 +1,11 @@
-import { useTranslation } from 'react-i18next';
+import { Authentification } from '@features/auth/ui/AuthWithEmail';
 
 import classes from './App.module.css';
 
 export const App = () => {
-  const { t } = useTranslation();
-
-  return <div className={classes.container}>{t('common.app')}</div>;
+  return (
+    <div className={classes.container}>
+      <Authentification />
+    </div>
+  );
 };
