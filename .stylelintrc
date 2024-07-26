@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    "stylelint-prettier"
+  ],
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "selector-class-pattern": "([a-z]+([A-Z][a-z0-9]+)*)",
+    "declaration-block-no-redundant-longhand-properties": null,
+    "media-query-no-invalid": null,
+    "keyframes-name-pattern": null,
+    "media-feature-range-notation": null,
+    "prettier/prettier": true
+  },
+  "ignoreFiles": [
+    "dist/**/*"
+  ]
+}
