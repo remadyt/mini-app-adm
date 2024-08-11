@@ -1136,43 +1136,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stitches/core@npm:^1.2.8":
-  version: 1.2.8
-  resolution: "@stitches/core@npm:1.2.8"
-  checksum: 10c0/f2ddf5aba3f3794529ceda10e573d61d649899c1d6e4f72f0fb77915577bb4e5a1ffc6e0cebd2bc19a1e6f93d5e1e91ff0790c7a8dfb452e90b090b1a5f1c531
-  languageName: node
-  linkType: hard
-
 "@supabase/auth-js@npm:2.64.4":
   version: 2.64.4
   resolution: "@supabase/auth-js@npm:2.64.4"
   dependencies:
     "@supabase/node-fetch": "npm:^2.6.14"
   checksum: 10c0/a76d14688da9e90a87e3878c64c47d006a413bb1949bd18d5e9b62131819ac1e39fc84cfcbf1d3ec1b13e5d80f40dbca24a1cd3889aa7102f044ca66aa9ddd13
-  languageName: node
-  linkType: hard
-
-"@supabase/auth-ui-react@npm:^0.4.7":
-  version: 0.4.7
-  resolution: "@supabase/auth-ui-react@npm:0.4.7"
-  dependencies:
-    "@stitches/core": "npm:^1.2.8"
-    "@supabase/auth-ui-shared": "npm:0.1.8"
-    prop-types: "npm:^15.7.2"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-  peerDependencies:
-    "@supabase/supabase-js": ^2.21.0
-  checksum: 10c0/841d8f4dc30d672db38e020ede35104ff0ae394585715c52dfef2cd3eb274fbef60211e29970a68efc45bade840159c75ac0567a74c9bf3ec53385c662149581
-  languageName: node
-  linkType: hard
-
-"@supabase/auth-ui-shared@npm:0.1.8, @supabase/auth-ui-shared@npm:^0.1.8":
-  version: 0.1.8
-  resolution: "@supabase/auth-ui-shared@npm:0.1.8"
-  peerDependencies:
-    "@supabase/supabase-js": ^2.21.0
-  checksum: 10c0/5a2b5f5d603827c3f626487fa569ff0c453e398400ff941fa50d66a7a689a1ff54e93ed0483186bc4e982eee25a454b949a97e5eb2a5e8c68b9eee2f9afa307f
   languageName: node
   linkType: hard
 
@@ -4935,7 +4904,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.2.0, react-dom@npm:^18.3.1":
+"react-dom@npm:^18.3.1":
   version: 18.3.1
   resolution: "react-dom@npm:18.3.1"
   dependencies:
@@ -5088,7 +5057,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.2.0, react@npm:^18.3.1":
+"react@npm:^18.3.1":
   version: 18.3.1
   resolution: "react@npm:18.3.1"
   dependencies:
@@ -6106,8 +6075,6 @@ __metadata:
     "@mantine/hooks": "npm:7.11.2"
     "@mantine/modals": "npm:^7.11.2"
     "@mantine/notifications": "npm:^7.11.2"
-    "@supabase/auth-ui-react": "npm:^0.4.7"
-    "@supabase/auth-ui-shared": "npm:^0.1.8"
     "@supabase/supabase-js": "npm:^2.44.4"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
