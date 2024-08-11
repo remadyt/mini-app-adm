@@ -1,5 +1,5 @@
+import { supabaseClient } from '@/shared/api/supabase';
 import { Button } from '@mantine/core';
-import { supabaseClient } from '@shared/api/supabase/supabaseClient.ts';
 import { useEffect, useState } from 'react';
 
 export const UserList = () => {
