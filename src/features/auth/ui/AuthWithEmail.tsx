@@ -1,5 +1,8 @@
+import { SendCategoriesForm } from '@/features/sendCategoriesForm/ui';
+import { SendProductsForm } from '@/features/sendProductsForm';
+import { SendUsersForm } from '@/features/sendUsersForm';
 import { useUser } from '@features/auth/model/useUser';
-import { Box, Button, Center, Container, Group, Paper, PasswordInput, TextInput, Title } from '@mantine/core';
+import { Box, Button, Center, Container, Flex, Group, Paper, PasswordInput, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { supabaseClient } from '@shared/api/supabase/supabaseClient.ts';
 
@@ -30,6 +33,12 @@ export const Authentification = () => {
         >
           logout
         </Button>
+
+        <Flex mih={50} gap="md" justify="flex-start" align="flex-start" direction="row" wrap="wrap">
+          <SendUsersForm />
+          <SendProductsForm />
+          <SendCategoriesForm />
+        </Flex>
       </div>
     );
   }
