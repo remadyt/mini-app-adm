@@ -1,4 +1,4 @@
-import { supabaseClient } from '@shared/api/supabase/supabaseClient.ts';
+import { supabaseClient } from '@/shared/api/supabase';
 import { User } from '@supabase/supabase-js';
 import { useEffect, useState } from 'react';
 

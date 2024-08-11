@@ -1,10 +1,8 @@
+import { supabaseClient } from '@/shared/api/supabase';
+import { Navbar } from '@/widgets/Navbar';
 import { useUser } from '@features/auth/model/useUser';
-import { Box, Button, Center, Container, Group, Paper, PasswordInput, TextInput, Title } from '@mantine/core';
+import { Box, Button, Center, Container, Group, Loader, Paper, PasswordInput, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import { supabaseClient } from '@shared/api/supabase/supabaseClient.ts';
-
-// import { GoogleButton } from './GoogleButton';
-// import { TwitterButton } from './TwitterButton';
 
 export const Authentification = () => {
   const form = useForm({
@@ -18,20 +16,18 @@ export const Authentification = () => {
     },
   });
 
-  const { user } = useUser();
+  const { user, loading } = useUser();
+
+  if (loading) {
+    return (
+      <Center style={{ minHeight: '100vh', height: '100%' }}>
+        <Loader />
+      </Center>
+    );
+  }
 
   if (user) {
-    return (
-      <div>
-        <Button
-          onClick={async () => {
-            await supabaseClient.auth.signOut();
-          }}
-        >
-          logout
-        </Button>
-      </div>
-    );
+    return <Navbar />;
   }
 
   return (
