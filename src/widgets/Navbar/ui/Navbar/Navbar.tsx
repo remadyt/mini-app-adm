@@ -1,6 +1,8 @@
 import { AppRouter } from '@/app/providers/AppRouter';
-import { dataWithLabelPages } from '@/shared/lib/const/dataWithLabelPages';
-import { AppShell, Burger } from '@mantine/core';
+import { LanguageSwitcher } from '@/features/LangSwitcher';
+import { ThemeSwitcher } from '@/features/ThemeSwitcher';
+import { useDataWithLabelPages } from '@/shared/lib/hooks/useDataWithLabelPages/useDataWithLabelPages';
+import { AppShell, Burger, Flex } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import clsx from 'clsx';
 import { NavLink } from 'react-router-dom';
@@ -11,11 +13,13 @@ import classes from './Navbar.module.css';
 export const Navbar = () => {
   const [opened, { toggle }] = useDisclosure();
 
+  const dataWithLabelPages = useDataWithLabelPages();
+
   const links = dataWithLabelPages.map((item) => (
     <NavLink
       to={item.link}
       key={item.label}
-      className={({ isActive }) => clsx(classes.link, { [classes.isActive]: isActive })}
+      className={({ isActive }) => clsx(classes.link, { [classes.isActiveNavLink]: isActive })}
     >
       <span>{item.label}</span>
     </NavLink>
@@ -32,12 +36,17 @@ export const Navbar = () => {
       padding="md"
     >
       <AppShell.Header>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <div>Logo</div>
+        <Flex justify="space-between" align="centert" wrap="wrap">
+          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+
+          <ThemeSwitcher />
+        </Flex>
       </AppShell.Header>
 
       <AppShell.Navbar p="md">
         <div className={classes.navbarMain}>{links}</div>
+
+        <LanguageSwitcher />
 
         <NavbarFooter />
       </AppShell.Navbar>
