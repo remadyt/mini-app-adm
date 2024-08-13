@@ -1,5 +1,12 @@
 {
   "common": {
     "app": "app"
-  }
+  },
+  "language": "EN",
+  "mainpage": "Main Page",
+  "categoriespage": "Categories Page",
+  "notfoundpage": "The page was not found",
+  "logout": "Logout",
+  "mainpagelabelsidebar": "Main",
+  "categoriespagelabelsidebar": "Categories"
 }

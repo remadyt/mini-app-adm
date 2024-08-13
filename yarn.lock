@@ -1495,6 +1495,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tabler/icons-react@npm:^3.12.0":
+  version: 3.12.0
+  resolution: "@tabler/icons-react@npm:3.12.0"
+  dependencies:
+    "@tabler/icons": "npm:3.12.0"
+  peerDependencies:
+    react: ">= 16"
+  checksum: 10c0/1ee054551f21c4ed865dd79417b68db91f8648f9dbc6d397228546879b85716468a79a4a32b2080ab94ecf89c871fbd76a2fe9155e8b3ae752666901042707ea
+  languageName: node
+  linkType: hard
+
+"@tabler/icons@npm:3.12.0":
+  version: 3.12.0
+  resolution: "@tabler/icons@npm:3.12.0"
+  checksum: 10c0/a143b3bdac2bf3d144c9b8e5fc1cf97d7dc02bfe5045b536b2ba13eaf51fd30a254cc68e078c503c75887ec04dbd92127744c2fb4b67e0b86546b054bf621697
+  languageName: node
+  linkType: hard
+
 "@types/conventional-commits-parser@npm:^5.0.0":
   version: 5.0.0
   resolution: "@types/conventional-commits-parser@npm:5.0.0"
@@ -6211,6 +6229,7 @@ __metadata:
     "@mantine/notifications": "npm:^7.11.2"
     "@reduxjs/toolkit": "npm:^2.2.7"
     "@supabase/supabase-js": "npm:^2.44.4"
+    "@tabler/icons-react": "npm:^3.12.0"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
     "@types/react-redux": "npm:^7.1.33"
