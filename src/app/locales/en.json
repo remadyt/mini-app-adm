@@ -8,5 +8,7 @@
   "notfoundpage": "The page was not found",
   "logout": "Logout",
   "mainpagelabelsidebar": "Main",
-  "categoriespagelabelsidebar": "Categories"
+  "categoriespagelabelsidebar": "Categories",
+  "userspagelabelsidebar": "Users",
+  "subheaderusertable": "Users"
 }
