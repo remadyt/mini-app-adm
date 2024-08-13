@@ -1,5 +1,5 @@
 import { supabaseClient } from '@/shared/api/supabase';
-import { Navbar } from '@/widgets/Navbar';
+import { MainContainer } from '@/widgets/MainContainer';
 import { useUser } from '@features/auth/model/useUser';
 import { Box, Button, Center, Container, Group, Loader, Paper, PasswordInput, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
@@ -27,7 +27,7 @@ export const Authentification = () => {
   }
 
   if (user) {
-    return <Navbar />;
+    return <MainContainer />;
   }
 
   return (
