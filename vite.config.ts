@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
 import { resolve, dirname } from 'path';
 import svgr from 'vite-plugin-svgr';
@@ -7,12 +7,13 @@ import checker from 'vite-plugin-checker';
 
 export default defineConfig({
   plugins: [
-      react(),
+    react(),
     viteTsconfigPaths(),
     svgr(),
     checker({
-    typescript: true,
-  }),],
+      typescript: true,
+    }),
+  ],
   resolve: {
     alias: {
       '@': resolve(dirname('.'), './src'),
@@ -24,4 +25,7 @@ export default defineConfig({
       '@entities': resolve(dirname('.'), './src/entities'),
     },
   },
-})
+  define: {
+    __API_RTK_URL__: JSON.stringify('http://localhost:5173'),
+  },
+});
