@@ -22,6 +22,11 @@ export const UserTable = (): JSX.Element => {
   }
 
   return (
-    <CustomTable subheader={t('subheaderusertable')} icons={iconsUserTable} theaders={theadersUserTable} rows={rows} />
+    <CustomTable
+      subheader={t('users.subheader.label')}
+      icons={iconsUserTable}
+      theaders={theadersUserTable}
+      rows={rows}
+    />
   );
 };

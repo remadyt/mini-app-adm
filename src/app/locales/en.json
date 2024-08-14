@@ -8,7 +8,21 @@
   "notfoundpage": "The page was not found",
   "logout": "Logout",
   "mainpagelabelsidebar": "Main",
-  "categoriespagelabelsidebar": "Categories",
-  "userspagelabelsidebar": "Users",
-  "subheaderusertable": "Users"
+  "categories": {
+    "sidebar": {
+      "label": "Categories"
+    },
+    "subheader": {
+      "label": "Categories"
+    }
+  },
+  "users": {
+    "sidebar": {
+      "label": "Users"
+    },
+    "subheader": {
+      "label": "Users"
+    }
+  },
+  "error": "Error"
 }

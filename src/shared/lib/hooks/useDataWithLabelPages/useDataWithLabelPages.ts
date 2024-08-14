@@ -7,7 +7,7 @@ export const useDataWithLabelPages = () => {
 
   return [
     { link: RoutePath.Main, label: t('mainpagelabelsidebar') },
-    { link: RoutePath.Categories, label: t('categoriespagelabelsidebar') },
-    { link: RoutePath.Users, label: t('userspagelabelsidebar') },
+    { link: RoutePath.Categories, label: t('categories.sidebar.label') },
+    { link: RoutePath.Users, label: t('users.sidebar.label') },
   ];
 };

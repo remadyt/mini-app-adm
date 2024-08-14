@@ -1,6 +1,8 @@
 import { rtkApi } from '@/shared/api/rtkApi';
 import { supabaseClient } from '@/shared/api/supabase';
 import { FetchBaseQueryError } from '@reduxjs/toolkit/query';
+import { notifications } from '@mantine/notifications';
+import { t } from 'i18next';
 
 import { IUser } from '../model/types/IUser';
 
@@ -11,9 +13,13 @@ const usersTableApi = rtkApi.injectEndpoints({
         const { data, error } = await supabaseClient.from('users').select('*');
 
         if (error) {
+          notifications.show({
+            title: t('error'),
+            message: error.message,
+          });
+
           return {
             error: {
-              status: 'Error in the FetchBaseQuery for Users',
               message: error.message,
             } as unknown as FetchBaseQueryError,
           };
