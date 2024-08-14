@@ -1,3 +1,3 @@
 export { CategoryTable } from './ui/CategoryTable/CategoryTable';
 
-export type { ICategory } from './model/types/ICategory';
+export type { CategoryType } from './model/types/CategoryType';

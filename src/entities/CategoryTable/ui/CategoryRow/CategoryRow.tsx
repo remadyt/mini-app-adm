@@ -1,13 +1,13 @@
 import { formatDate } from '@/shared/lib/const/formatDate';
 import { Table } from '@mantine/core';
 
-import { ICategory } from '../../model/types/ICategory';
+import { CategoryType } from '../../model/types/CategoryType';
 
 interface CategoryRowProps {
-  category: ICategory;
+  category: CategoryType;
 }
 
-export const CategoryRow = (props: CategoryRowProps): JSX.Element => {
+export const CategoryRow = (props: CategoryRowProps) => {
   const { category } = props;
 
   return (
