@@ -6,7 +6,7 @@ interface CustomTableProps {
   subheader: string;
   icons?: JSX.Element;
   theaders: string[];
-  rows: JSX.Element[] | undefined;
+  rows?: JSX.Element[];
 }
 
 export const CustomTable = (props: CustomTableProps): JSX.Element => {

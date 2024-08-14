@@ -25,7 +25,4 @@ export default defineConfig({
       '@entities': resolve(dirname('.'), './src/entities'),
     },
   },
-  define: {
-    __API_RTK_URL__: JSON.stringify('http://localhost:5173'),
-  },
 });

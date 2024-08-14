@@ -8,7 +8,21 @@
   "notfoundpage": "Страница не была найдена",
   "logout": "Выйти",
   "mainpagelabelsidebar": "Главная",
-  "categoriespagelabelsidebar": "Категории",
-  "userspagelabelsidebar": "Пользователи",
-  "subheaderusertable": "Пользователи"
+  "categories": {
+    "sidebar": {
+      "label": "Категории"
+    },
+    "subheader": {
+      "label": "Категории"
+    }
+  },
+  "users": {
+    "sidebar": {
+      "label": "Пользователи"
+    },
+    "subheader": {
+      "label": "Пользователи"
+    }
+  },
+  "error": "Ошибка"
 }
