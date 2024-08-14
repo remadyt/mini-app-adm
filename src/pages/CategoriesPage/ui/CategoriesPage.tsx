@@ -1,9 +1,11 @@
-import { useTranslation } from 'react-i18next';
+import { CategoryTable } from '@/entities/CategoryTable';
 
 const CategoriesPage = () => {
-  const { t } = useTranslation();
-
-  return <div>{t('categoriespage')}</div>;
+  return (
+    <div>
+      <CategoryTable />
+    </div>
+  );
 };
 
 export default CategoriesPage;
