@@ -7,7 +7,11 @@
   "categoriespage": "Categories Page",
   "notfoundpage": "The page was not found",
   "logout": "Logout",
-  "mainpagelabelsidebar": "Main",
+  "mainPage": {
+    "sidebar": {
+      "label": "Main"
+    }
+  },
   "categories": {
     "sidebar": {
       "label": "Categories"
@@ -22,6 +26,14 @@
     },
     "subheader": {
       "label": "Users"
+    }
+  },
+  "products": {
+    "sidebar": {
+      "label": "Products"
+    },
+    "subheader": {
+      "label": "Products"
     }
   },
   "error": "Error"
