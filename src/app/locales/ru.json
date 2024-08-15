@@ -7,7 +7,11 @@
   "categoriespage": "Страница категорий",
   "notfoundpage": "Страница не была найдена",
   "logout": "Выйти",
-  "mainpagelabelsidebar": "Главная",
+  "mainPage": {
+    "sidebar": {
+      "label": "Главная"
+    }
+  },
   "categories": {
     "sidebar": {
       "label": "Категории"
@@ -22,6 +26,14 @@
     },
     "subheader": {
       "label": "Пользователи"
+    }
+  },
+  "products": {
+    "sidebar": {
+      "label": "Продукты"
+    },
+    "subheader": {
+      "label": "Продукты"
     }
   },
   "error": "Ошибка"
