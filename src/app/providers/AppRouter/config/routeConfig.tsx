@@ -4,6 +4,7 @@ import { lazy } from 'react';
 
 const MainPage = lazy(() => import('@/pages/MainPage/ui/MainPage'));
 const CategoriesPage = lazy(() => import('@/pages/CategoriesPage/ui/CategoriesPage'));
+const ProductsPage = lazy(() => import('@/pages/ProductsPage/ui/ProductsPage'));
 const UsersPage = lazy(() => import('@/pages/UsersPage/ui/UsersPage'));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage/ui/NotFoundPage'));
 
@@ -15,6 +16,10 @@ export const routes: IRoute[] = [
   {
     path: RoutePath.Categories,
     element: <CategoriesPage />,
+  },
+  {
+    path: RoutePath.Products,
+    element: <ProductsPage />,
   },
   {
     path: RoutePath.Users,
