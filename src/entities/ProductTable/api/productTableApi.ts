@@ -4,13 +4,13 @@ import { notifications } from '@mantine/notifications';
 import { FetchBaseQueryError } from '@reduxjs/toolkit/query';
 import { t } from 'i18next';
 
-import { IUser } from '../model/types/IUser';
+import { IProduct } from '../model/types/IProduct';
 
-const usersTableApi = rtkApi.injectEndpoints({
+const productsTableApi = rtkApi.injectEndpoints({
   endpoints: (builder) => ({
-    getUsers: builder.query<IUser[], null>({
+    getProducts: builder.query<IProduct[], null>({
       queryFn: async () => {
-        const { data, error } = await supabaseClient.from('users').select('*');
+        const { data, error } = await supabaseClient.from('products').select('*');
 
         if (error) {
           notifications.show({
@@ -31,4 +31,4 @@ const usersTableApi = rtkApi.injectEndpoints({
   }),
 });
 
-export const useGetUsers = usersTableApi.useGetUsersQuery;
+export const useGetProducts = productsTableApi.useGetProductsQuery;
