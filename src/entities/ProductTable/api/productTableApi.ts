@@ -1,8 +1,7 @@
 import { rtkApi } from '@/shared/api/rtkApi';
 import { supabaseClient } from '@/shared/api/supabase';
-import { notifications } from '@mantine/notifications';
+import { errorsHandler } from '@/shared/lib/errorHandler';
 import { FetchBaseQueryError } from '@reduxjs/toolkit/query';
-import { t } from 'i18next';
 
 import { IProduct } from '../model/types/IProduct';
 
@@ -13,10 +12,7 @@ const productsTableApi = rtkApi.injectEndpoints({
         const { data, error } = await supabaseClient.from('products').select('*');
 
         if (error) {
-          notifications.show({
-            title: t('error'),
-            message: error.message,
-          });
+          errorsHandler(error);
 
           return {
             error: {
