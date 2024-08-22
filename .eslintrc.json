@@ -37,7 +37,7 @@
     "no-unused-private-class-members": "error",
     "no-use-before-define": "error",
     "no-floating-promises": "off",
-    "camelcase": "error",
+    "camelcase": "warn",
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/array-type": [
       "error",
