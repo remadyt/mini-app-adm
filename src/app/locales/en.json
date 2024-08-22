@@ -34,7 +34,26 @@
     },
     "subheader": {
       "label": "Products"
+    },
+    "forms": {
+      "label": {
+        "name": "Name",
+        "composition": "Composition",
+        "weight": "Weight",
+        "price": "Price",
+        "imageUrl": "Image URL",
+        "category": "Category"
+      },
+      "placeholder": {
+        "name": "Enter name",
+        "composition": "Enter composition",
+        "weight": "Enter weight",
+        "price": "Enter price",
+        "imageUrl": "Enter image URL",
+        "selectCategory": "Select category"
+      }
     }
   },
-  "error": "Error"
+  "error": "Error",
+  "AddProduct": "Add a product"
 }
