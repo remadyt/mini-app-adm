@@ -37,7 +37,7 @@
     },
     "forms": {
       "label": {
-        "name": "Name",
+        "title": "Title",
         "composition": "Composition",
         "weight": "Weight",
         "price": "Price",
@@ -45,13 +45,25 @@
         "category": "Category"
       },
       "placeholder": {
-        "name": "Enter name",
+        "title": "Enter title",
         "composition": "Enter composition",
         "weight": "Enter weight",
         "price": "Enter price",
         "imageUrl": "Enter image URL",
         "selectCategory": "Select category"
       }
+    },
+    "table": {
+      "columns": {
+        "actionButtons": {
+          "view": "View",
+          "delete": "Delete"
+        }
+      }
+    },
+    "details": {
+      "productNotFound": "The product was not found!",
+      "goBackToProductsBtn": "Go back to the products"
     }
   },
   "error": "Error",

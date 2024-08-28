@@ -17,12 +17,12 @@ export const ProductTableModalForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <TextInput
-        label={t('products.forms.label.name')}
+        label={t('products.forms.label.title')}
         type="string"
-        placeholder={t('products.forms.placeholder.name')}
+        placeholder={t('products.forms.placeholder.title')}
         mb="md"
-        key={formProduct.key('nameProduct')}
-        {...formProduct.getInputProps('nameProduct')}
+        key={formProduct.key('titleProduct')}
+        {...formProduct.getInputProps('titleProduct')}
       />
       <TextInput
         label={t('products.forms.label.composition')}

@@ -37,7 +37,7 @@
     },
     "forms": {
       "label": {
-        "name": "Имя",
+        "title": "Название",
         "composition": "Состав",
         "weight": "Вес",
         "price": "Цена",
@@ -45,13 +45,25 @@
         "category": "Категория"
       },
       "placeholder": {
-        "name": "Введите имя",
+        "title": "Введите название",
         "composition": "Введите состав продукта",
         "weight": "Введите вес",
         "price": "Введите цену",
         "imageUrl": "Введите URL-адрес изображения",
         "selectCategory": "Выберите категорию"
       }
+    },
+    "table": {
+      "columns": {
+        "actionButtons": {
+          "view": "Просмотр",
+          "delete": "Удалить"
+        }
+      }
+    },
+    "details": {
+      "productNotFound": "Продукт не найден!",
+      "goBackToProductsBtn": "Вернуться назад к продуктам"
     }
   },
   "error": "Ошибка",

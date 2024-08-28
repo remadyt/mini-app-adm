@@ -2,9 +2,9 @@ import { CustomTable } from '@/shared/ui/CustomTable';
 import { Center, Loader } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 
-import { CategoryRow } from '../CategoryRow/CategoryRow';
-import { theadersCategoryTable } from '../../model/const/theadersCategoryTable';
 import { useGetCategories } from '../../api/categoryTableApi';
+import { theadersCategoryTable } from '../../model/const/theadersCategoryTable';
+import { CategoryRow } from '../CategoryRow/CategoryRow';
 
 export const CategoryTable = (): JSX.Element => {
   const { t } = useTranslation();

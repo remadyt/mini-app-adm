@@ -1,5 +1,5 @@
 import { LanguageSwitcher } from '@/features/LangSwitcher';
-import { useDataWithLabelPages } from '@/shared/lib/hooks/useDataWithLabelPages/useDataWithLabelPages';
+import { useDataWithLabelPages } from '@/shared/lib/hooks';
 import { AppShell } from '@mantine/core';
 import clsx from 'clsx';
 import { NavLink } from 'react-router-dom';

@@ -15,7 +15,7 @@ export const useHandlesForProduct = () => {
   const formProduct = useForm({
     initialValues: {
       categoryId: '',
-      nameProduct: '',
+      titleProduct: '',
       compositionProduct: '',
       weightProduct: '',
       priceProduct: '',
@@ -30,7 +30,7 @@ export const useHandlesForProduct = () => {
       const { error } = await supabaseClient.from('products').insert([
         {
           category_id: Number.parseInt(values.categoryId, 10),
-          name: values.nameProduct,
+          title: values.titleProduct,
           composition: values.compositionProduct,
           weight: Number.parseFloat(values.weightProduct),
           price: Number.parseFloat(values.priceProduct),
