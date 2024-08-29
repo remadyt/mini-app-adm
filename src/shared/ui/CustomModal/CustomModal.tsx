@@ -1,5 +1,6 @@
 import { Modal } from '@mantine/core';
 import { PropsWithChildren } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface CustomModalProps extends PropsWithChildren {
   isModalOpen: boolean;
@@ -7,11 +8,11 @@ interface CustomModalProps extends PropsWithChildren {
   title: string;
 }
 
-export const CustomModal = (props: CustomModalProps) => {
-  const { isModalOpen, onCloseModal, title, children } = props;
+export const CustomModal = ({ isModalOpen, onCloseModal, title, children }: CustomModalProps) => {
+  const { t } = useTranslation();
 
   return (
-    <Modal opened={isModalOpen} onClose={onCloseModal} title={title}>
+    <Modal opened={isModalOpen} onClose={onCloseModal} title={t(title)}>
       {children}
     </Modal>
   );

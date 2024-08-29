@@ -8,7 +8,7 @@ import { errorsHandler } from '../../errorHandler';
 export const useUpdateProductFromTable = () => {
   const updateProduct = useCallback(async (id: number, fieldsForUpdates: DeepPartial<IProduct>) => {
     try {
-      const { data, error } = await supabaseClient.from('products').update(fieldsForUpdates).eq('id', id);
+      const { data, error } = await supabaseClient.from('products').update(fieldsForUpdates).eq('id', id).select();
 
       if (error) {
         throw error;

@@ -7,9 +7,7 @@ interface CategoryRowProps {
   category: CategoryType;
 }
 
-export const CategoryRow = (props: CategoryRowProps) => {
-  const { category } = props;
-
+export const CategoryRow = ({ category }: CategoryRowProps) => {
   return (
     <Table.Tr>
       <Table.Td>{category.id}</Table.Td>

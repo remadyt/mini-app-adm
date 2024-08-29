@@ -2,15 +2,17 @@ import { useGetProducts } from '@/entities/ProductTable/api/productTableApi';
 import { useMemo } from 'react';
 
 export const useGetProductById = (productId?: string) => {
-  const { data: products, isLoading, isError } = useGetProducts(null);
+  const { data, isLoading, isError } = useGetProducts({});
 
   const product = useMemo(() => {
+    const products = data?.data || [];
+
     if (!products || !productId) {
       return null;
     }
 
     return products.find((product) => product.id === Number(productId));
-  }, [products, productId]);
+  }, [data?.data, productId]);
 
   return {
     product,

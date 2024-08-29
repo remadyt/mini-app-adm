@@ -4,3 +4,4 @@ export { useDataWithLabelPages } from './useDataWithLabelPages/useDataWithLabelP
 export { useDeleteProductFromTable } from './useDeleteProductFromTable/useDeleteProductFromTable';
 export { useUpdateProductFromTable } from './useUpdateProductFromTable/useUpdateProductFromTable';
 export { useGetProductById } from './useGetProductById/useGetProductById';
+export { usePaginatedProducts } from './usePaginatedProducts/usePaginatedProducts';

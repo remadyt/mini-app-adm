@@ -1,13 +1,73 @@
 import { useGetCategories } from '@/entities/CategoryTable/api/categoryTableApi';
+import { useUser } from '@/features/auth/model/useUser';
 import { supabaseClient } from '@/shared/api/supabase';
+import { errorsHandler } from '@/shared/lib/errorHandler';
+import { usePaginatedProducts } from '@/shared/lib/hooks';
 import { useForm } from '@mantine/form';
+import { useId } from '@mantine/hooks';
 import { notifications } from '@mantine/notifications';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { useGetProducts } from '../../api/productTableApi';
-
 export const useHandlesForProduct = () => {
+  const uuid = useId();
+  const { user } = useUser();
+  const [, setImages] = useState<string[]>([]);
+
+  const getImages = async () => {
+    try {
+      const { data, error } = await supabaseClient.storage.from('images').list(user?.id + '/');
+
+      if (error) {
+        throw error;
+      }
+
+      setImages(data.map((file) => file.name));
+    } catch (error) {
+      if (error instanceof Error) {
+        errorsHandler(error);
+      }
+    }
+  };
+
+  const uploadImage = async (file: File | null): Promise<string | undefined> => {
+    if (!file || !user) {
+      return;
+    }
+
+    try {
+      const { data, error } = await supabaseClient.storage.from('images').upload(`${user.id}/${uuid}`, file);
+
+      if (error) {
+        throw error;
+      }
+
+      await getImages();
+
+      return data.path;
+    } catch (error) {
+      if (error instanceof Error) {
+        errorsHandler(error);
+      }
+    }
+  };
+
+  const deleteImage = async (imageName: string) => {
+    try {
+      const { error } = await supabaseClient.storage.from('images').remove([imageName]);
+
+      if (error) {
+        throw error;
+      }
+
+      getImages();
+    } catch (error) {
+      if (error instanceof Error) {
+        errorsHandler(error);
+      }
+    }
+  };
+
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { data: categories } = useGetCategories(null);
@@ -19,11 +79,11 @@ export const useHandlesForProduct = () => {
       compositionProduct: '',
       weightProduct: '',
       priceProduct: '',
-      imageUrlProduct: '',
+      imageFile: '',
     },
   });
 
-  const { refetch } = useGetProducts(null);
+  const { refetchProducts } = usePaginatedProducts();
 
   const onAddProduct = useCallback(
     async (values: typeof formProduct.values) => {
@@ -34,7 +94,7 @@ export const useHandlesForProduct = () => {
           composition: values.compositionProduct,
           weight: Number.parseFloat(values.weightProduct),
           price: Number.parseFloat(values.priceProduct),
-          image: values.imageUrlProduct,
+          image: values.imageFile,
         },
       ]);
 
@@ -44,32 +104,29 @@ export const useHandlesForProduct = () => {
           message: error.message,
         });
       } else {
-        refetch();
+        refetchProducts();
         setIsModalOpen(false);
         formProduct.reset();
       }
     },
-    [formProduct, refetch, t],
+    [formProduct, refetchProducts, t],
   );
 
-  const handleSubmit = formProduct.onSubmit((values: typeof formProduct.values) => {
+  const handleSubmit = (values: typeof formProduct.values) => {
     onAddProduct(values);
-  });
+  };
 
-  const onCloseModal = useCallback(() => {
-    setIsModalOpen(false);
-  }, []);
-
-  const onHandleClickActionButtonToAddProduct = useCallback(() => {
-    setIsModalOpen(true);
-  }, []);
+  const toggleAddProductModal = () => {
+    setIsModalOpen((previous) => !previous);
+  };
 
   return {
     isModalOpen,
     handleSubmit,
-    onCloseModal,
-    onHandleClickActionButtonToAddProduct,
+    toggleAddProductModal,
     formProduct,
+    uploadImage,
+    deleteImage,
     categories,
   };
 };
