@@ -34,7 +34,31 @@
     },
     "subheader": {
       "label": "Продукты"
+    },
+    "forms": {
+      "label": {
+        "title": "Название",
+        "composition": "Состав",
+        "weight": "Вес",
+        "price": "Цена",
+        "imageUrl": "Выберите фотографию",
+        "category": "Категория"
+      },
+      "placeholder": {
+        "title": "Введите название",
+        "composition": "Введите состав продукта",
+        "weight": "Введите вес",
+        "price": "Введите цену",
+        "imageUrl": "Выберите фотографию",
+        "selectCategory": "Выберите категорию"
+      }
+    },
+    "details": {
+      "productNotFound": "Продукт не найден!",
+      "goBackToProductsBtn": "Вернуться назад к продуктам"
     }
   },
-  "error": "Ошибка"
+  "error": "Ошибка",
+  "addProduct": "Добавить продукт",
+  "editProduct": "Изменить продукт"
 }

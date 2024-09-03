@@ -7,9 +7,7 @@ interface UserRowProps {
   user: IUser;
 }
 
-export const UserRow = (props: UserRowProps): JSX.Element => {
-  const { user } = props;
-
+export const UserRow = ({ user }: UserRowProps) => {
   return (
     <Table.Tr key={user.id}>
       <Table.Td>{user.id}</Table.Td>

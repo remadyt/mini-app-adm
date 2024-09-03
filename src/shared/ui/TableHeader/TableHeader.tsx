@@ -6,9 +6,7 @@ interface TableHeaderProps {
   icons: ReactNode;
 }
 
-export const TableHeader = (props: TableHeaderProps): JSX.Element => {
-  const { subheader, icons } = props;
-
+export const TableHeader = ({ subheader, icons }: TableHeaderProps) => {
   return (
     <>
       <Flex justify="space-between" align="center" mb="md">

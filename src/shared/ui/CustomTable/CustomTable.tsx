@@ -9,9 +9,7 @@ interface CustomTableProps {
   rows?: JSX.Element[];
 }
 
-export const CustomTable = (props: CustomTableProps): JSX.Element => {
-  const { subheader, icons, theaders, rows } = props;
-
+export const CustomTable = ({ subheader, icons, theaders, rows }: CustomTableProps) => {
   return (
     <>
       <TableHeader subheader={subheader} icons={icons} />

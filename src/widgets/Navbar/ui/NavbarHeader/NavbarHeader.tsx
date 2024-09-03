@@ -6,9 +6,7 @@ interface NavbarHeaderProps {
   toggle: () => void;
 }
 
-export const NavbarHeader = (props: NavbarHeaderProps): JSX.Element => {
-  const { opened, toggle } = props;
-
+export const NavbarHeader = ({ opened, toggle }: NavbarHeaderProps): JSX.Element => {
   return (
     <>
       <AppShell.Header>

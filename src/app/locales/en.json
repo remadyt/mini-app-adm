@@ -34,7 +34,31 @@
     },
     "subheader": {
       "label": "Products"
+    },
+    "forms": {
+      "label": {
+        "title": "Title",
+        "composition": "Composition",
+        "weight": "Weight",
+        "price": "Price",
+        "imageUrl": "Choose a photo",
+        "category": "Category"
+      },
+      "placeholder": {
+        "title": "Enter title",
+        "composition": "Enter composition",
+        "weight": "Enter weight",
+        "price": "Enter price",
+        "imageUrl": "Choose a photo",
+        "selectCategory": "Select category"
+      }
+    },
+    "details": {
+      "productNotFound": "The product was not found!",
+      "goBackToProductsBtn": "Go back to the products"
     }
   },
-  "error": "Error"
+  "error": "Error",
+  "addProduct": "Add a product",
+  "editProduct": "Change the product"
 }
